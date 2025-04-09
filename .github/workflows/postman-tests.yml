@@ -28,6 +28,7 @@ jobs:
         run: |
           newman --version
           newman run uploading.postman_collection.json \
+            --iteration-data uploading-data.json \
             --reporters cli,html \
             --reporter-html-export report.html
 
