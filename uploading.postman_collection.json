@@ -41,7 +41,7 @@
             {
               "key": "file",
               "type": "file",
-              "src": "file.json"
+              "src": "{{fileName}}"
             }
           ]
         },
