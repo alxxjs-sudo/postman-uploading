@@ -1,0 +1,58 @@
+{
+  "info": {
+    "_postman_id": "de1b0c85-8b39-40d6-af6e-ba0976bf8793",
+    "name": "uploading",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "29457758",
+    "_collection_link": "https://planetary-equinox-341760.postman.co/workspace/Trello~0e93192c-8704-4475-8e08-6f4180e87da1/collection/29457758-de1b0c85-8b39-40d6-af6e-ba0976bf8793?action=share&source=collection_link&creator=29457758"
+  },
+  "item": [
+    {
+      "name": "first-request",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "let response = pm.response.json();\r",
+              "\r",
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Check if file has been uploaded\", function () {\r",
+              "    pm.expect(response.files.file).to.not.be.undefined;\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": "file.json"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://httpbin.org/post",
+          "protocol": "https",
+          "host": ["httpbin", "org"],
+          "path": ["post"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
