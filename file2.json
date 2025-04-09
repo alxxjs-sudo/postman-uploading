@@ -1,0 +1,14 @@
+[
+  {
+    "boardNumber": 5,
+    "todoBoardName": "TODO_1",
+    "doneBoardName": "DONE_1",
+    "taskName": "new_task_1"
+  },
+  {
+    "boardNumber": 22,
+    "todoBoardName": "TODO_22",
+    "doneBoardName": "DONE_22",
+    "taskName": "new_task_22"
+  }
+]
